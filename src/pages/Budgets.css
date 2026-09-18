@@ -1,0 +1,115 @@
+.budgets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.budget-card {
+  position: relative;
+}
+
+.budget-card.status-warning {
+  border-color: rgba(251,191,36,0.3);
+}
+
+.budget-card.status-critical,
+.budget-card.status-exceeded {
+  border-color: rgba(248,113,113,0.3);
+}
+
+.budget-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.budget-cat-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-cat-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.budget-period {
+  font-size: 0.8125rem;
+}
+
+.budget-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.budget-amounts {
+  margin-bottom: 12px;
+}
+
+.budget-spent {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.budget-of {
+  font-size: 1.25rem;
+}
+
+.budget-total {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.budget-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.budget-pct {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Budget alerts */
+.budget-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.budget-alert-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+.budget-alert-item.alert-warning {
+  background: var(--warning-dim);
+  color: var(--warning);
+  border: 1px solid rgba(251,191,36,0.3);
+}
+
+.budget-alert-item.alert-critical,
+.budget-alert-item.alert-exceeded {
+  background: var(--danger-dim);
+  color: var(--danger);
+  border: 1px solid rgba(248,113,113,0.3);
+}
+
+@media (max-width: 768px) {
+  .budgets-grid {
+    grid-template-columns: 1fr;
+  }
+}

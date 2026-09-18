@@ -1,0 +1,132 @@
+/* Charts common styles */
+.chart-card {
+  padding: 24px;
+}
+
+.chart-tooltip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  box-shadow: var(--shadow-md);
+  font-size: 0.875rem;
+  min-width: 140px;
+}
+
+.chart-tooltip p {
+  margin: 3px 0;
+}
+
+.tooltip-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px !important;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 6px !important;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.legend-item::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+.legend-item.income::before { background: #4ade80; }
+.legend-item.expense::before { background: #f87171; }
+
+/* Donut chart */
+.donut-chart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.donut-center {
+  position: absolute;
+  left: calc(55% / 2);
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-total {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.donut-label {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.donut-legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donut-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+}
+
+.donut-legend-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 3px;
+}
+
+.donut-legend-name {
+  flex: 1;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.donut-legend-pct {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .donut-chart-wrapper {
+    flex-direction: column;
+  }
+
+  .donut-chart-wrapper > div:first-child {
+    width: 100% !important;
+  }
+
+  .donut-center {
+    left: 50%;
+  }
+
+  .donut-legend {
+    width: 100%;
+  }
+}

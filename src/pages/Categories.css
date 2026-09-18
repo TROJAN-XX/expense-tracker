@@ -1,0 +1,129 @@
+.cat-section {
+  margin-bottom: 28px;
+}
+
+.cat-section-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.cat-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.cat-card-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cat-card-info {
+  min-width: 0;
+}
+
+.cat-card-name {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cat-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.cat-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Emoji grid */
+.emoji-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+}
+
+.emoji-btn {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  background: var(--bg-input);
+  cursor: pointer;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.emoji-btn:hover {
+  background: var(--bg-hover);
+  transform: scale(1.1);
+}
+
+.emoji-btn.selected {
+  border-color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+}
+
+/* Color grid */
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.color-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.color-btn:hover {
+  transform: scale(1.15);
+}
+
+.color-btn.selected {
+  border-color: white;
+  box-shadow: 0 0 0 2px var(--accent-cyan);
+  transform: scale(1.1);
+}
+
+/* Cat preview */
+.cat-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+}

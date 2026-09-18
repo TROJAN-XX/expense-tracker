@@ -1,0 +1,42 @@
+.reports-metrics {
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.metric-value {
+  font-size: 1.625rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.metric-sub {
+  margin-top: 6px;
+}
+
+.reports-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.reports-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+}

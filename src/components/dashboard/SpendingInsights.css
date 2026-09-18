@@ -1,0 +1,39 @@
+.insights-badge {
+  font-size: 0.6875rem;
+  padding: 2px 8px;
+  background: var(--success-dim);
+  color: var(--success);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.insight-item {
+  padding: 12px 14px;
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-cyan);
+  transition: transform var(--transition-fast);
+}
+
+.insight-item:hover {
+  transform: translateX(2px);
+}
+
+.insight-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.insights-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  font-style: italic;
+}

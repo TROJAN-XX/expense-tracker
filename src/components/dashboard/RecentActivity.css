@@ -1,0 +1,65 @@
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item:hover {
+  background: var(--bg-hover);
+  border-radius: var(--radius-md);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 -10px;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.activity-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-desc {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-meta {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.activity-amount {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}

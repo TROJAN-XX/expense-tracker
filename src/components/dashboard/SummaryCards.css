@@ -1,0 +1,79 @@
+/* Summary Cards */
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.stat-card.accent-cyan::before { background: linear-gradient(90deg, var(--accent-cyan), #0891b2); }
+.stat-card.accent-green::before { background: linear-gradient(90deg, var(--accent-green), #16a34a); }
+.stat-card.accent-red::before { background: linear-gradient(90deg, var(--accent-red), #dc2626); }
+.stat-card.accent-purple::before { background: linear-gradient(90deg, var(--accent-purple), #7c3aed); }
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.stat-card.accent-cyan .stat-icon { background: var(--accent-cyan-dim); color: var(--accent-cyan); }
+.stat-card.accent-green .stat-icon { background: var(--accent-green-dim); color: var(--success); }
+.stat-card.accent-red .stat-icon { background: var(--accent-red-dim); color: var(--danger); }
+.stat-card.accent-purple .stat-icon { background: var(--accent-purple-dim); color: var(--accent-purple); }
+
+.stat-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-subtitle {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.stat-trend {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.stat-trend.positive { color: var(--success); }
+.stat-trend.negative { color: var(--danger); }

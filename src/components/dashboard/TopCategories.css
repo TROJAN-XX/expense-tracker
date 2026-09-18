@@ -1,0 +1,55 @@
+.top-cats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top-cat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-cat-rank {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 24px;
+  text-align: center;
+}
+
+.top-cat-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.top-cat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.top-cat-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-cat-amount {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.top-cat-pct {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+}
